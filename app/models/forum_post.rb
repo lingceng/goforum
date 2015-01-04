@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: form_posts
+# Table name: forum_posts
 #
 #  id              :integer          not null, primary key
 #  forum_thread_id :integer
@@ -10,7 +10,7 @@
 #  updated_at      :datetime
 #
 
-class FormPost < ActiveRecord::Base
+class ForumPost < ActiveRecord::Base
    belongs_to :user
    belongs_to :forum_thread
 end

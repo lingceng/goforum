@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: form_threads
+# Table name: forum_threads
 #
 #  id         :integer          not null, primary key
 #  user_id    :integer
@@ -9,10 +9,7 @@
 #  updated_at :datetime
 #
 
-require 'test_helper'
-
-class FormThreadTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+class ForumThread < ActiveRecord::Base
+  belongs_to :user
+  has_many :forum_posts
 end

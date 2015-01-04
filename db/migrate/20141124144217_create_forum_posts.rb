@@ -1,6 +1,6 @@
-class CreateFormPosts < ActiveRecord::Migration
+class CreateForumPosts < ActiveRecord::Migration
   def change
-    create_table :form_posts do |t|
+    create_table :forum_posts do |t|
       t.integer :forum_thread_id
       t.integer :user_id
       t.text :body

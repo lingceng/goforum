@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: form_posts
+# Table name: forum_posts
 #
 #  id              :integer          not null, primary key
 #  forum_thread_id :integer
@@ -12,7 +12,7 @@
 
 require 'test_helper'
 
-class FormPostTest < ActiveSupport::TestCase
+class ForumPostTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
