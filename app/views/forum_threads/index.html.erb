@@ -1,0 +1,6 @@
+<% @forum_threads.each do |f| %>
+  <div> Subject: <%= f.subject  %> </div>
+  <% f.forum_posts.each do |p| %>
+    <div> Comment:<%= p.body %> </div>
+  <% end -%>
+<% end -%>

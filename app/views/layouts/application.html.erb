@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>GorailsForum</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
-<%= yield %>
-
-</body>
+  <head>
+    <title>GorailsForum</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <%= render "shared/navbar" %>
+    <div class='container'>
+      <% if flash[:notice] || flash[:alert] %>
+        <p class="text-success"><%= flash[:notice] %></p>
+        <p class="text-danger"><%= flash[:alert] %></p>
+      <% end -%>
+      <%= yield %>
+    </div>
+  </body>
 </html>
